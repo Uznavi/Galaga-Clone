@@ -1,2 +1,2 @@
 # Galaga-Clone
-Clone of Galaga with changes by me
+Clone of Galaga with changes created by me
