@@ -2,6 +2,7 @@ import pygame
 import constants as c
 import random
 
+
 class Enemy(pygame.sprite.Sprite):
     def __init__(self):
         super(Enemy, self).__init__()
@@ -12,6 +13,7 @@ class Enemy(pygame.sprite.Sprite):
         self.rect.x = random.randrange(0, c.DISPLAY_WIDTH - self.rect.width)
         self.rect.y = -self.rect.height
         self.snd_hit = pygame.mixer.Sound("hit_sound.ogg")
+        self.bullets = pygame.sprite.Group()
         self.hp = 1
         self.score_value = 5
         self.vel_x = 0

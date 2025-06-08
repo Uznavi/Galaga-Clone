@@ -57,6 +57,12 @@ while running:
             player.get_hit()
             enemy[0].hp = 0
             enemy[0].get_hit()
+    for enemy in enemy_spawner.enemy_group:
+        collided = pygame.sprite.groupcollide(sprite_group, enemy.bullets, False, True)
+        for player, bullet in collided.items():
+            if not player.is_invincible:
+                player.get_hit()
+                #TODO: add sfx for the player getting hit and shit
 
 
     #Render the display
@@ -65,6 +71,8 @@ while running:
     sprite_group.draw(display)
     player.bullets.draw(display)
     enemy_spawner.enemy_group.draw(display)
+    for enemy in enemy_spawner.enemy_group:
+        enemy.bullets.draw(display)
     particle_spawner.particle_group.draw(display)
     player.hud_group.draw(display)
     player.hud.icons_group.draw(display)

@@ -3,9 +3,17 @@ DISPLAY_WIDTH = 350
 DISPLAY_HEIGHT = 625
 DISPLAY_SIZE = (DISPLAY_WIDTH, DISPLAY_HEIGHT)
 
-#Controller info
+# Switch Controller info
 NS_Y = 3
 NS_B = 1
 NS_START = 6
 NS_LEFT = 13
 NS_RIGHT = 14
+
+#Logitech Controller Info
+LG_1 = 0
+LG_2 = 1
+LG_START = 9
+LG_HAT_LEFT = (-1,0)
+LG_HAT_RIGHT = (1,0)
+LG_HAT_NEUTRAL = (0,0)
